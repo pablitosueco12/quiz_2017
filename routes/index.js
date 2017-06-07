@@ -46,7 +46,6 @@ router.get('/author', function (req, res, next) {
     res.render('author');
 });
 
-<<<<<<< HEAD
 
 // Autoload de rutas que usen :quizId
 router.param('quizId', quizController.load);
@@ -115,7 +114,7 @@ router.delete('/quizzes/:quizId(\\d+)',
 router.get('/quizzes/:quizId(\\d+)/play',
     quizController.juegoaleatorio);
 router.get('/quizzes/:quizId(\\d+)/check',
-    quizController.comprueba);
+    quizController.comprobacion);
 
 
 router.get('/quizzes/:quizId(\\d+)/tips/new',
@@ -137,6 +136,5 @@ router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
 router.get('/help', function(req, res, next) {
     res.render('help');
 });
-practica51
 
 module.exports = router;
