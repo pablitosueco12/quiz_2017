@@ -46,6 +46,7 @@ router.get('/author', function (req, res, next) {
     res.render('author');
 });
 
+<<<<<<< HEAD
 
 // Autoload de rutas que usen :quizId
 router.param('quizId', quizController.load);
@@ -112,9 +113,9 @@ router.delete('/quizzes/:quizId(\\d+)',
     quizController.destroy);
 
 router.get('/quizzes/:quizId(\\d+)/play',
-    quizController.play);
+    quizController.juegoaleatorio);
 router.get('/quizzes/:quizId(\\d+)/check',
-    quizController.check);
+    quizController.comprueba);
 
 
 router.get('/quizzes/:quizId(\\d+)/tips/new',
@@ -131,5 +132,11 @@ router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
     sessionController.loginRequired,
     tipController.destroy);
 
+
+// Pagina de creditos
+router.get('/help', function(req, res, next) {
+    res.render('help');
+});
+practica51
 
 module.exports = router;
